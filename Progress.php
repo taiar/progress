@@ -31,12 +31,9 @@
     private function progress_bar() {
       $r = "[";
       $n_bars = (($this->progress_percentage * $this->progress_bar_size) / 100);
-      for ($i = 0; $i <= $n_bars; $i++)
-        $r .= $this->progress_bar_cell;
-      for ($j = 0; $j < $this->progress_bar_size - $n_bars; $j++)
-        $r .= " ";
-      $r .= "]";
-      return $r;
+      for ($i = 0; $i <= $n_bars; $i++) $r .= $this->progress_bar_cell;
+      for ($j = 0; $j < $this->progress_bar_size - $n_bars; $j++) $r .= " ";
+      return $r . "]";
     }
 
     private function progress() {
